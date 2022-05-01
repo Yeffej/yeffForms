@@ -1,0 +1,74 @@
+.FormCreation {
+    width: 100%;
+}
+.FormCreation_title {
+    font-size: 3em;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.FormCreation_form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Form_Field {
+    margin-bottom: 20px;
+}
+.Form_Field label {
+    display: inline-block;
+    font-size: 0.9em;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.Form_Field input{
+    padding: 8px;
+    border: none;
+    border-bottom: 2px solid #000;
+    vertical-align: middle;
+}
+.Form_Field textarea{
+    padding: 5px;
+    border: 2px solid #000;
+    width: 100%;
+    max-width: 600px;
+}
+.Qmaker_container {
+    margin-bottom: 25px;
+}
+.Qmaker_container label{
+    font-size: 1em;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.Qmaker_container button, .Form_action input[type=button] {
+    background-color: var(--actionColor);
+    outline: none;
+    cursor: pointer;
+}
+.Qmaker_container button {
+    height: 40px;
+    width: 40px;
+    font-size: 1.2em;
+    font-weight: 900;
+    border: 2px outset rgb(0, 0, 0);
+    border-radius: 50%;
+    transition: transform 200ms;
+}
+.Qmaker_container button:active {
+    transform: scale(.7);
+}
+.Form_action input[type=button] {
+    min-width: 250px;
+    padding: 8px;
+    font-weight: 600;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 2px var(--actionColor-dark);
+    transition: transform 200ms;
+}
+.Form_action input[type=button]:active {
+    transform: scale(.8);
+}

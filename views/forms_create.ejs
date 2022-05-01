@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./includes/head.ejs")  %>
+</head>
+<body>
+    <%- include("./includes/header.ejs")  %>
+    <section class="FormCreation">
+        <h1 class="FormCreation_title">Titulo</h1>
+        <form class="FormCreation_form" >
+            <div class="Form_Field">
+                <label for="">Nombre:</label>
+                <input type="text" name="name" id="name" value="">
+            </div>
+            <div class="Form_Field">
+                <label for="">Autor:</label>
+                <input type="text" name="author" id="author" value="">
+            </div>
+            <div class="Form_Field">
+                <label for="">Descripción:</label>
+                <textarea name="description" id="description" cols="30" rows="10">
+                </textarea>
+            </div>
+            <div class="Qmaker_container">
+                <label for="QuestionMaker">Crea tus preguntas</label>
+                <button type="button" id="QuestionMaker">+</button>
+                <div class="QuestionWrapper"></div>
+            </div>
+            <div class="Form_action">
+                <input type="button" value="Crear Formulario">
+            </div>
+        </form>
+    </section>
+    <%- include("./includes/footer.ejs")  %>
+    
+    <script src="/forms_create.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+:root {
+    --mainColor: #fff;
+    --secondaryColor: #3636ff;
+    --actionColor: #0aa4e6;
+    --actionColor-dark: #02415c;
+    --mainFontColor: #222;
+    --secondaryFontColor: #fff;
+    --BoldFontColor: #111;
+    --lightFontColor: #9c9c9c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--mainFontColor);
+    background-color: var(--mainColor);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    min-height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondaryColor);
+    color: var(--secondaryFontColor);
+    margin-bottom: 30px;
+    padding: 0 16px;
+}
+header .title {
+    font-size: 1.7em;
+    font-weight: 600;
+    font-style: italic;
+    color: var(--secondaryFontColor);
+    text-decoration: none;
+}
+header .title:hover {
+    text-decoration: underline;
+}
+header .navigation {
+    height: 100%;
+    min-width: 50%;
+    text-align: center;
+}
+header .navigation ul {
+    height: inherit;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+header .navigation li {
+    list-style: none;
+    display: inline-block;
+    height: inherit;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+header .navigation li a {
+    height: inherit;
+}
+header .navigation li a:hover {
+    color: var(--actionColor);
+}
+
+footer {
+    width: 100%;
+    height: 4rem;
+    background-color: var(--secondaryColor);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--secondaryFontColor);
+    margin-top: 30px;
+}
+footer .description{
+    font-size: 0.9em;
+    font-weight: 600;
+}
+footer .socialMedia {
+    
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./includes/head.ejs")  %> 
+</head>
+<body>
+    <%- include("./includes/header.ejs")  %>
+    <section class="Hero">
+        <h1 class="Hero_title">Yeff Forms</h1>
+        <p class="Hero_details">
+            Esta es una aplicación que te permite crear formularios de forma
+            interactiva, puedes crear un formulario o buscar uno que desees llenar,
+            los formularios deben de tener el nombre del autor, un titulo que los identifique
+            y una pequeña descripción de estos.
+        </p>
+        <div class="Hero_actions">
+            <button>
+                <a href="/forms/create">Crear Formulario</a>
+            </button>
+            <button>
+                <a href="/forms">Ver Formularios</a>
+            </button>
+        </div>
+    </section>
+    <%- include("./includes/footer.ejs")  %> 
+</body>
+</html>

@@ -1,0 +1,31 @@
+{
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.7",
+    "express": "^4.17.3",
+    "mysql": "^2.18.1"
+  },
+  "name": "yeffforms",
+  "version": "1.0.0",
+  "description": "Project of Questions and answers base on google forms",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "jest --verbose",
+    "db-show": "node ./database/show.js",
+    "db-create": "node ./database/create.js",
+    "db-drop": "node ./database/drop.js"
+  },
+  "keywords": [
+    "node",
+    "forms",
+    "questions",
+    "answers"
+  ],
+  "author": "yeffej",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "jest": "^28.0.1"
+  }
+}

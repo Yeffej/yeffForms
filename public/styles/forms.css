@@ -1,0 +1,34 @@
+.Forms {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+}
+
+.Form {
+    width: 80%;
+    max-width: 800px;
+    font-size: .85em;
+    box-shadow: 0px 0px 8px 1px #00000055;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 25px;
+}
+.Form:hover {
+    box-shadow: 0px 0px 8px 1px #000000aa;
+}
+.Form_title {
+    font-size: 1.4em;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+.Form_description {
+    margin: 10px 0;
+}
+.Form_author {
+    font-weight: 600;
+}
+.Form_author strong {
+    color: var(--actionColor);
+}
