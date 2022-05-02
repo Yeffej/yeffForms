@@ -5,20 +5,44 @@
 </head>
 <body>
     <%- include("./includes/header.ejs")  %>
+    <% if (locals.success) { %>
+        <div class="Card Success">
+            <button class="Card_deleteBT">X</button>
+            <h4 class="Card_title">El Formulario ha sido creado con éxito.</h4>
+            <a href="/forms" class="Card_link">Ver formularios</a>
+        </div> 
+    <% } %> 
+    <% if (locals.failure && !locals.success) { %>
+        <div class="Card Failure">
+            <button class="Card_deleteBT">X</button>
+            <h4 class="Card_title">Error: formulario no pudo ser creado</h4>
+            <p class="Card_message">
+                <%= locals.details?.message %>
+            </p>
+        </div> 
+    <% } %> 
+
+
     <section class="FormCreation">
         <h1 class="FormCreation_title">Titulo</h1>
-        <form class="FormCreation_form" >
+        <form method="post"  class="FormCreation_form" >
             <div class="Form_Field">
                 <label for="">Nombre:</label>
-                <input type="text" name="name" id="name" value="">
+                <input type="text" name="name" id="name" value="<%=locals.data?.name%>">
             </div>
             <div class="Form_Field">
                 <label for="">Autor:</label>
-                <input type="text" name="author" id="author" value="">
+                <input type="text" name="author" id="author" value="<%=locals.data?.author%>">
             </div>
             <div class="Form_Field">
                 <label for="">Descripción:</label>
-                <textarea name="description" id="description" cols="30" rows="10">
+                <textarea 
+                    name="description" 
+                    id="description" 
+                    cols="30" 
+                    rows="10" 
+                    value="<%=locals.data?.description%>"
+                >
                 </textarea>
             </div>
             <div class="Qmaker_container">
@@ -27,7 +51,7 @@
                 <div class="QuestionWrapper"></div>
             </div>
             <div class="Form_action">
-                <input type="button" value="Crear Formulario">
+                <input type="submit" value="Crear Formulario">
             </div>
         </form>
     </section>

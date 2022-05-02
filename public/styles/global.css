@@ -6,7 +6,9 @@
     --mainFontColor: #222;
     --secondaryFontColor: #fff;
     --BoldFontColor: #111;
-    --lightFontColor: #9c9c9c;
+    --lightFontColor: #6d6d6d;
+    --successColor: #00ff99;
+    --failureColor: #e10000;
 }
 
 * {
