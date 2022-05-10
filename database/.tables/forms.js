@@ -4,7 +4,7 @@ const table =  {
     name: "VARCHAR(100) NOT NULL,",
     author: "VARCHAR(80) NOT NULL,",
     description: "VARCHAR(500) NOT NULL,",
-    quesions: "TEXT"
+    questions: "TEXT"
 }
 
 module.exports = table

@@ -1,0 +1,77 @@
+.FormEdit {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.FormEdit_data {
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+.FormEdit_data thead{
+    background: var(--secondaryColor-dark);
+    color: var(--secondaryFontColor);
+}
+.FormEdit_data th{
+    font-weight: 600;
+    font-size: 1.2em;
+    padding: 14px;
+}
+.FormEdit_data tbody{
+    background-color: var(--mainColor-dark);
+}
+.FormEdit_data tbody td{
+    font-size: .9em;
+    padding: 8px;
+    color: var(--BoldFontColor);
+}
+
+.FormEdit_Editor {
+    align-self: flex-start;
+    margin: 25px 0 0 35px;
+}
+.Editor_title {
+    font-size: 1.8em;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.Editor {
+    border: 2px solid #000;
+    border-radius: 6px;
+    box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, .5);
+    padding: 15px;
+}
+.Editor_field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.Editor_field input {
+    font-size: .85em;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #000;
+}
+.Editor_field label {
+    font-weight: 600;
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+.Editor_field textarea {
+    font-size: 1.1em;
+    padding: 5px;
+}
+.Editor_action input[type="submit"]{
+    min-width: 55%;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--actionColor);
+    box-shadow: inset -4px -4px 2px 0 var(--actionColor-dark);
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 8px;
+    cursor: pointer;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("./includes/head.ejs")  %> 
+</head>
+<body>
+    <%- include("./includes/header.ejs")  %> 
+    <section class="FormChoose">
+        <h1 class="FormChoose_title">¿Qué quieres hacer?</h1>
+        <div class="FormChoose_action">
+            <button class="FormChoose_bt-fill">
+                <a href="" id="redirectFill">Llenar formulario</a>
+            </button>
+            <button class="FormChoose_bt-edit">
+                <a href="" id="redirectEdit">Editar formulario</a>
+            </button>
+        </div>
+    </section>
+    <%- include("./includes/footer.ejs")  %>
+
+    <script src="/js/forms_id.js"></script>
+</body>
+</html>

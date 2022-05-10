@@ -17,17 +17,21 @@ class Model {
         })
     }
 
-    sqlFetch(query, callback = (results, fields)=> {} ) {
+    sqlFetch(query, callback = (err, results, fields)=> {} ) {
         this._dbPool.getConnection((err, con)=> {
-            if(err) throw new Error("Connection error: " + err.message);
+            if(err) {
+                console.error("Connection error: " + err.message)
+                callback(err, null, null)
+                return;
+            }
 
             con.query(query, (err, results, fields)=> {
                 // release connection to the pool
                 con.release()
             
-                if(err) throw new Error("Connection error: " + err.message);
+                if(err) console.error("Query error: " + err.message);
 
-                callback(results, fields)
+                callback(err, results, fields)
             })
         })
     }

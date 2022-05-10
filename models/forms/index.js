@@ -10,32 +10,40 @@ class FormsModel extends Model {
     getAll(callback) {
         const sql = "SELECT * FROM forms"
 
-        this.sqlFetch(sql, (results, fields)=> {
-            callback(results)
+        this.sqlFetch(sql, (err, results, fields)=> {
+            callback(err, results, fields)
         })
     }
     get(id, callback) {
         const sql = `SELECT * FROM forms WHERE id = ${id}`
 
-        this.sqlFetch(sql, (results, fields)=> {
-            callback(results)
+        this.sqlFetch(sql, (err, results, fields)=> {
+            callback(err, results, fields)
         })  
     }
-    create(formData) {
-        const sql = `SELECT * FROM forms WHERE id = ${id}`
+    create(data, callback) {
+        const sql = `INSERT INTO forms (name, author, description, questions)
+            VALUES ('${data.name}', '${data.author}', '${data.description}', 
+                ${data.questions? `'${data.questions}'` : null})`
 
-        this.sqlFetch(sql)  
+        this.sqlFetch(sql, (err)=> {
+            callback(err)
+        })
     }
-    update(id, formData) {
+    update(id, data) {
         const sql = `SELECT * FROM forms WHERE id = ${id}`
 
-        this.sqlFetch(sql)  
+        this.sqlFetch(sql, (err)=> {
+            callback(err)
+        }) 
     }
     delete(id) {
         const sql = `SELECT * FROM forms WHERE id = ${id}`
 
-        this.sqlFetch(sql)  
+        this.sqlFetch(sql, (err)=> {
+            callback(err)
+        })  
     }
 }
 
-module.exports = FormsModel
+module.exports = new FormsModel()

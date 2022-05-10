@@ -1,6 +1,8 @@
 :root {
     --mainColor: #fff;
+    --mainColor-dark: #dfdfdf;
     --secondaryColor: #3636ff;
+    --secondaryColor-dark: #0d0d7d;
     --actionColor: #0aa4e6;
     --actionColor-dark: #02415c;
     --mainFontColor: #222;

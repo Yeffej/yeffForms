@@ -6,15 +6,16 @@
 <body>
     <%- include("./includes/header.ejs")  %> 
     <section class="Forms">
-        <a href="/forms/id" class="Form">
-            <h4 class="Form_title">Titulo</h4>
-            <p class="Form_description">
-                Descripción: Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Sint repellendus suscipit temporibus eaque fuga, id eius, recusandae 
-                inventore error quaerat fugiat expedita ipsam impedit minus nulla. Harum 
-                eveniet quas mollitia?</p>
-            <span class="Form_author"><strong>Autor:</strong> Nombre Autor</span>
-        </a>
+        <h1 class="Forms_mainTitle">Formularios Disponibles:</h1>
+        <% for(const form of locals.forms) { %>
+            <a href="/forms/<%=form.id%> " class="Form">
+                <h4 class="Form_title"><%=form.name%></h4>
+                <p class="Form_description">
+                    <strong>Descripción:</strong> <%=form.description%>
+                </p>
+                <span class="Form_author"><strong>Autor:</strong> <%=form.author%></span>
+            </a>
+        <% } %>
     </section>
     <%- include("./includes/footer.ejs")  %> 
 </body>
