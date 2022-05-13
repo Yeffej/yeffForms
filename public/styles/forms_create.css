@@ -85,7 +85,11 @@
     position: absolute;
     top: 30px;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, -200%);
+    animation-name: CardIn;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
 }
 .Success {
     background-color: var(--successColor);
@@ -136,8 +140,30 @@
 
 
 @keyframes CardIn {
-    
+    0% {
+        transform: translate(-50%, -200%);
+    }
+    40% {
+        transform: translate(-50%, 20%);
+    }
+    80% {
+        transform: translate(-50%, -10%);
+    }
+    100% {
+        transform: translate(-50%, 0);
+    }
 }
 @keyframes CardOut {
-    
+    0% {
+        transform: translate(-50%, 0);
+    }
+    25% {
+        transform: translate(-50%, -10%);
+    }
+    50% {
+        transform: translate(-50%, 20%);
+    }
+    100% {
+        transform: translate(-50%, -200%);
+    }
 }

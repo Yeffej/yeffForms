@@ -15,7 +15,7 @@ router.get("/", (req, res)=> {
             res.status(500).render("error500")
 
         }else {
-            console.log(result)
+            // console.log(result)
 
             res.render("forms", {
                 title: "Formularios", 

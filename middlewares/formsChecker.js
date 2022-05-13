@@ -25,12 +25,21 @@ module.exports = function (req, res, next) {
         ? req.body.description.trim()
         : null
 
+    let questions
+    try {
+        JSON.parse(req.body.questions)
+        questions = req.body.questions
+    } catch {
+        questions = null
+    }
+    // console.log(req.body)
 
     if(name && author && description) {
         req.formData = {
             name,
             author,
-            description
+            description,
+            questions
         }
 
         req.isDataCorrect = true

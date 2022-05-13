@@ -16,22 +16,22 @@
             </thead>
             <tbody>
                 <tr>
-                    <td><%= locals.form.name %></td>
-                    <td><%= locals.form.author %></td>
-                    <td><%= locals.form.description %></td>
+                    <td class="data-name"><%= locals.form.name %></td>
+                    <td class="data-author"><%= locals.form.author %></td>
+                    <td class="data-description"><%= locals.form.description %></td>
                 </tr>
             </tbody>
         </table>
         <div class="FormEdit_Editor">
             <h3 class="Editor_title">Editar Formulario:</h3>
-            <form method="post" class="Editor">
+            <form method="post" class="Editor" id="editorForm">
                 <div class="Editor_field">
                     <label for="">Nombre:</label>
-                    <input type="text" name="name" id="name" value="<%=locals.form.name%>">
+                    <input type="text" name="name" class="data-name" value="<%=locals.form.name%>">
                 </div>
                 <div class="Editor_field">
                     <label for="">Autor:</label>
-                    <input type="text" name="author" id="author" value="<%=locals.form.author%>">
+                    <input type="text" name="author" class="data-author" value="<%=locals.form.author%>">
                 </div>
                 <div class="Editor_field">
                     <label for="">Descripción:</label>
@@ -40,6 +40,7 @@
                         id="description" 
                         cols="30" 
                         rows="10"
+                        class="data-description"
                     ><%=locals.form.description%></textarea>
                 </div>
                 <div class="Editor_action">

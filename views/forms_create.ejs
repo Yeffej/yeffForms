@@ -6,14 +6,14 @@
 <body>
     <%- include("./includes/header.ejs")  %>
     <% if (locals.success) { %>
-        <div class="Card Success">
+        <div class="Card Success" id="cardWrapper">
             <button class="Card_deleteBT">X</button>
             <h4 class="Card_title">El Formulario ha sido creado con éxito.</h4>
             <a href="/forms" class="Card_link">Ver formularios</a>
         </div> 
     <% } %> 
     <% if (locals.failure && !locals.success) { %>
-        <div class="Card Failure">
+        <div class="Card Failure" id="cardWrapper">
             <button class="Card_deleteBT">X</button>
             <h4 class="Card_title">Error: formulario no pudo ser creado</h4>
             <p class="Card_message">
@@ -25,7 +25,7 @@
 
     <section class="FormCreation">
         <h1 class="FormCreation_title">Titulo</h1>
-        <form method="post"  class="FormCreation_form" >
+        <form method="post"  class="FormCreation_form" id="targetForm">
             <div class="Form_Field">
                 <label for="">Nombre:</label>
                 <input type="text" name="name" id="name" value="<%=locals.data?.name%>">
@@ -41,9 +41,9 @@
                 </textarea>
             </div>
             <div class="Qmaker_container">
-                <label for="QuestionMaker">Crea tus preguntas</label>
-                <button type="button" id="QuestionMaker">+</button>
-                <div class="QuestionWrapper"></div>
+                <label for="questionAdder">Crea tus preguntas</label>
+                <button type="button" id="questionAdder">+</button>
+                <div class="QuestionWrapper" id="questionWrapper"></div>
             </div>
             <div class="Form_action">
                 <input type="submit" value="Crear Formulario">
@@ -52,6 +52,6 @@
     </section>
     <%- include("./includes/footer.ejs")  %>
     
-    <script src="/forms_create.js"></script>
+    <script src="/js/forms_create.js"></script>
 </body>
 </html>

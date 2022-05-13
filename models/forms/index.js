@@ -31,11 +31,14 @@ class FormsModel extends Model {
         })
     }
     update(id, data) {
-        const sql = `SELECT * FROM forms WHERE id = ${id}`
+        const sql = `UPDATE forms 
+            SET name = '${data.name}', author = '${data.author}', 
+            description = '${data.description}'
+            WHERE id = ${id}`
 
         this.sqlFetch(sql, (err)=> {
             callback(err)
-        }) 
+        })
     }
     delete(id) {
         const sql = `SELECT * FROM forms WHERE id = ${id}`
