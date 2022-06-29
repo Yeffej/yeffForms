@@ -1,11 +1,13 @@
 .FormEdit {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(2, max-content);
+    justify-items: center;
 }
 
 .FormEdit_data {
+    grid-column: 1/3;
     border-collapse: collapse;
     margin-bottom: 30px;
 }
@@ -28,10 +30,15 @@
 }
 
 .FormEdit_Editor {
+    min-width: 80%;
     align-self: flex-start;
     margin: 25px 0 0 35px;
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-evenly;
 }
 .Editor_title {
+    grid-column: 1/3;
     font-size: 1.8em;
     font-weight: 600;
     margin-bottom: 10px;
@@ -74,4 +81,56 @@
     font-weight: 600;
     padding: 8px;
     cursor: pointer;
+}
+
+.Editor_questions {
+    border: 2px solid #000;
+    border-radius: 6px;
+    box-shadow: 1px 1px 8px 1px rgba(0, 0, 0, .5);
+    padding: 15px;
+}
+.questions_title {
+    font-size: 1.15em;
+    font-weight: 600;
+}
+.questions_addBT {
+    font-weight: 600;
+    padding: 2px 5px;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+}
+.questions_addBT:active {
+    transform: scale(.8);
+}
+.questions_wrapper .Question label {
+    font-size: .86em;
+    font-weight: 600;
+}
+.questions_wrapper .Question input {
+    margin: 0 2px;
+    padding: 2px;
+}
+.questions_wrapper .Question select {
+    border-radius: 2px;
+    border: 1px solid #000;
+    background-color: transparent;
+}
+.questions_wrapper .Question select:focus {
+    outline: 2px solid var(--secondaryColor-dark);
+}
+
+.questions_saveBT {
+    display: block;
+    margin: 10px auto;
+    padding: 5px 10px;
+    border: 2px solid var(--actionColor-dark);
+    border-radius: 5px;
+    background-color: var(--actionColor);
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: 200ms transform;
+}
+.questions_saveBT:active {
+    transform: scale(.8);
 }

@@ -30,7 +30,7 @@ class FormsModel extends Model {
             callback(err)
         })
     }
-    update(id, data) {
+    update(id, data, callback) {
         const sql = `UPDATE forms 
             SET name = '${data.name}', author = '${data.author}', 
             description = '${data.description}'
@@ -40,7 +40,16 @@ class FormsModel extends Model {
             callback(err)
         })
     }
-    delete(id) {
+    updateQuestions(id, questions, callback) {
+        const sql = `UPDATE forms 
+            SET questions = '${questions}'
+            WHERE id = ${id}`
+
+        this.sqlFetch(sql, (err)=> {
+            callback(err)
+        })
+    }
+    delete(id, callback) {
         const sql = `SELECT * FROM forms WHERE id = ${id}`
 
         this.sqlFetch(sql, (err)=> {

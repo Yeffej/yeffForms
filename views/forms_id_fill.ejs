@@ -6,35 +6,19 @@
 <body>
     <%- include("./includes/header.ejs")  %> 
     <section class="FormFill">
-        <h1 class="FormFill_title">Form Name</h1>
+        <h1 class="FormFill_title"><%= locals.formData?.name %> </h1>
         <div class="FormFill_wrapper">
-            <div class="FormFill_Question">
-                <h3 class="Question_title">Question-1?</h3>
-                <input 
-                    class="Question_answer" 
-                    type="text" 
-                    id="questionAnswer-1" 
-                    name="questionAnswer-1"
-                >
-            </div>
-            <div class="FormFill_Question">
-                <h3 class="Question_title">Question-2?</h3>
-                <input 
-                    class="Question_answer" 
-                    type="text" 
-                    id="questionAnswer-2" 
-                    name="questionAnswer-2"
-                >
-            </div>
-            <div class="FormFill_Question">
-                <h3 class="Question_title">Question-3?</h3>
-                <input 
-                    class="Question_answer" 
-                    type="text" 
-                    id="questionAnswer-3" 
-                    name="questionAnswer-3"
-                >
-            </div>
+            <% locals.questions?.forEach(question => { %>
+                <div class="FormFill_Question">
+                    <h3 class="Question_title"><%= question.value %></h3>
+                    <input 
+                        class="Question_answer" 
+                        type="<%= question.type %>" 
+                        id="questionAnswer-<%= question.order %>" 
+                        name="questionAnswer-<%= question.order %>"
+                    >
+                </div>
+            <% }) %>
         </div>
     </section>
     <%- include("./includes/footer.ejs")  %> 
